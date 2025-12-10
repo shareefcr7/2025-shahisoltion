@@ -21,7 +21,7 @@ export function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-6">Let's Connect</h2>
+            <h2 className="text-3xl font-bold sm:text-4xl mb-6 bg-[linear-gradient(110deg,#ffffff,45%,#94a3b8,55%,#ffffff)] bg-[length:200%_100%] animate-shimmer bg-clip-text text-transparent">Let's Connect</h2>
             <p className="text-muted-foreground text-lg mb-8">
               Whether you want to join our training or build a software solution, we are here to help.
             </p>

@@ -26,9 +26,14 @@ export function Hero() {
               Launch Your Tech Career
             </div>
             
-            <h1 className="text-4xl font-extrabold tracking-tight text-white lg:text-6xl xl:text-7xl">
-              Building Future <span className="text-primary block mt-2">Software Engineers</span>
-              <span className="text-muted-foreground text-2xl lg:text-4xl block mt-4 font-normal">
+            <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl xl:text-7xl">
+              <span className="bg-[linear-gradient(110deg,#ffffff,45%,#94a3b8,55%,#ffffff)] bg-[length:200%_100%] animate-shimmer bg-clip-text text-transparent">
+                Building Future
+              </span>
+              <span className="block mt-2 bg-[linear-gradient(110deg,#3b82f6,45%,#93c5fd,55%,#3b82f6)] bg-[length:200%_100%] animate-shimmer bg-clip-text text-transparent">
+                Software Engineers
+              </span>
+              <span className="text-2xl lg:text-4xl block mt-4 font-normal bg-[linear-gradient(110deg,#ffffff,45%,#94a3b8,55%,#ffffff)] bg-[length:200%_100%] animate-shimmer bg-clip-text text-transparent">
                 & Real-World Solutions.
               </span>
             </h1>
@@ -66,6 +71,7 @@ export function Hero() {
                   src="/images/hero-visual.png" 
                   alt="Future Software Engineering" 
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover animate-breathe"
                   priority
                />

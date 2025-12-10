@@ -3,6 +3,7 @@
 import { Container } from "@/components/ui/container";
 import { motion } from "framer-motion";
 import { BookOpen, Code, Laptop, Users, GraduationCap, Briefcase } from "lucide-react";
+import Image from "next/image";
 
 const services = [
   {
@@ -52,7 +53,7 @@ export function Services() {
           <p className="text-muted-foreground">From comprehensive training to professional development services.</p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {services.map((service, index) => (
                 <motion.div
                     key={index}

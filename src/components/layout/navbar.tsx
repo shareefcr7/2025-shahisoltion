@@ -10,11 +10,10 @@ import { useTheme } from "next-themes";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#founder", label: "Founder" },
-  { href: "#careers", label: "Careers" },
-  { href: "#contact", label: "Contact" },
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/careers", label: "Careers" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Navbar() {
@@ -44,12 +43,12 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                className="text-base font-medium text-muted-foreground hover:text-primary transition-colors"
                 scroll={true}
               >
                 {link.label}
@@ -69,10 +68,10 @@ export function Navbar() {
             <Button 
                 variant="tech" 
                 size="sm" 
-                className="bg-[linear-gradient(110deg,#3b82f6,45%,#93c5fd,55%,#3b82f6)] bg-[length:200%_100%] animate-shimmer text-white hover:shadow-[0_0_20px_rgba(59,130,246,0.6)] border-0"
+                className="bg-[linear-gradient(110deg,#3b82f6,45%,#93c5fd,55%,#3b82f6)] bg-[length:200%_100%] animate-shimmer text-white hover:shadow-[0_0_20px_rgba(59,130,246,0.6)] border-0 uppercase tracking-wider font-semibold"
                 asChild
             >
-              <Link href="#contact">Start Learning</Link>
+              <Link href="/contact">Start Learning</Link>
             </Button>
           </nav>
 
@@ -121,7 +120,7 @@ export function Navbar() {
                 variant="tech" 
                 asChild
               >
-                <Link href="#contact" onClick={() => setIsOpen(false)}>Start Learning</Link>
+                <Link href="/contact" onClick={() => setIsOpen(false)}>Start Learning</Link>
               </Button>
             </Container>
           </motion.div>

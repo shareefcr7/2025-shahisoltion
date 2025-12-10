@@ -1,12 +1,11 @@
 import { Hero } from "@/components/sections/hero";
-import { About } from "@/components/sections/about";
 import { Founder } from "@/components/sections/founder";
-import { CEO } from "@/components/sections/ceo";
 import { Services } from "@/components/sections/services";
 import { Skills } from "@/components/sections/skills";
-import { Careers } from "@/components/sections/careers";
-import { Testimonials } from "@/components/sections/testimonials";
 import { Highlights } from "@/components/sections/highlights";
+import { Careers } from "@/components/sections/careers";
+import { CPU as CEO } from "@/components/sections/ceo";
+import { Testimonials } from "@/components/sections/testimonials";
 import { Contact } from "@/components/sections/contact";
 
 export default function Home() {
@@ -14,12 +13,11 @@ export default function Home() {
     <>
       <Hero />
       <Founder />
-      <CEO />
-      <About />
       <Services />
       <Skills />
       <Highlights />
       <Careers />
+      <CEO />
       <Testimonials />
       <Contact />
     </>
