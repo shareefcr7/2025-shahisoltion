@@ -1,0 +1,648 @@
+@import "tailwindcss";
+
+:root {
+  /* Premium Light Blue Theme - Enhanced Contrast */
+  --background: #f8fafc;
+  /* Soft Blue-White */
+  --foreground: #0c2340;
+  /* Deep Navy - Darker for readability */
+
+  --primary: #0284c7;
+  /* Vibrant Sky Blue */
+  --primary-foreground: #ffffff;
+
+  --secondary: #e0f2fe;
+  /* Light Sky Blue */
+  --secondary-foreground: #0a2540;
+  /* Deep Navy */
+
+  --accent: #0ea5e9;
+  /* Electric Sky Blue */
+  --accent-foreground: #ffffff;
+
+  --muted: #f0f9ff;
+  /* Very Light Blue */
+  --muted-foreground: #1e3a5a;
+  /* Dark Slate Blue - Much darker */
+
+  --card: #ffffff;
+  --card-foreground: #0c2340;
+  /* Deep Navy */
+
+  --border: #bae6fd;
+  /* Sky Blue 200 */
+  --ring: #0284c7;
+
+  /* Text emphasis colors */
+  --text-primary: #0c2340;
+  --text-secondary: #1e3a5a;
+  --text-muted: #475569;
+}
+
+.dark {
+  /* Ultra Dark Blue Theme - Deep Space (Transparent for Starfield) */
+  --background: rgba(10, 14, 39, 0.85);
+  /* 85% opacity to let stars shine through subtle */
+  /* Near-Black Navy */
+  --foreground: #e0f2fe;
+  /* Light Sky Blue */
+
+  --primary: #3b82f6;
+  /* Rich Royal Blue */
+  --primary-foreground: #ffffff;
+
+  --secondary: #1e293b;
+  /* Very Dark Slate Blue */
+  --secondary-foreground: #e0f2fe;
+
+  --accent: #60a5fa;
+  /* Bright Blue */
+  --accent-foreground: #ffffff;
+
+  --muted: #1e2640;
+  /* Very Dark Blue-Gray */
+  --muted-foreground: #94a3b8;
+  /* Slate 400 */
+
+  --card: #111827;
+  /* Almost Black with Blue Tint */
+  --card-foreground: #e0f2fe;
+
+  --border: #1e3a8a;
+  /* Dark Royal Blue */
+  --ring: #3b82f6;
+
+  /* Premium Gradient Variables */
+  --gradient-start: #0a0e27;
+  --gradient-mid: #1e293b;
+  --gradient-end: #1e3a8a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 10px -5px var(--primary), 0 0 5px -5px var(--accent);
+    }
+
+    to {
+      box-shadow: 0 0 20px 5px var(--primary), 0 0 10px 5px var(--accent);
+    }
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+/* Dark Theme Section Backgrounds */
+.dark section {
+  background: var(--background);
+}
+
+.dark .bg-secondary\/20 {
+  background: rgba(30, 41, 59, 0.3) !important;
+}
+
+.dark .bg-secondary\/10 {
+  background: rgba(30, 41, 59, 0.15) !important;
+}
+
+.dark .bg-secondary\/30 {
+  background: rgba(30, 41, 59, 0.4) !important;
+}
+
+.dark .bg-secondary\/50 {
+  background: rgba(30, 41, 59, 0.6) !important;
+}
+
+/* Enhanced Card Backgrounds in Dark Mode */
+.dark .bg-background {
+  background: var(--background);
+}
+
+.dark .bg-background\/50 {
+  background: rgba(10, 14, 39, 0.5) !important;
+}
+
+/* Ensure smooth transitions */
+* {
+  transition-property: background-color, border-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+/* Light Theme Text Enhancements */
+:root:not(.dark) h1,
+:root:not(.dark) h2,
+:root:not(.dark) h3,
+:root:not(.dark) h4,
+:root:not(.dark) h5,
+:root:not(.dark) h6 {
+  color: var(--text-primary);
+}
+
+:root:not(.dark) p,
+:root:not(.dark) span,
+:root:not(.dark) div {
+  color: var(--foreground);
+}
+
+:root:not(.dark) .text-white {
+  color: var(--text-primary) !important;
+}
+
+:root:not(.dark) .text-muted-foreground {
+  color: var(--muted-foreground) !important;
+}
+
+:root:not(.dark) .text-foreground {
+  color: var(--foreground) !important;
+}
+
+/* Enhanced contrast for light backgrounds */
+:root:not(.dark) section {
+  background: var(--background);
+}
+
+:root:not(.dark) .bg-secondary\/20 {
+  background: rgba(224, 242, 254, 0.5) !important;
+}
+
+:root:not(.dark) .bg-secondary\/10 {
+  background: rgba(224, 242, 254, 0.3) !important;
+}
+
+/* PREMIUM TYPOGRAPHY MODEL: "Bebas Neue Impact" */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-bebas), sans-serif;
+  letter-spacing: 0.02em;
+  /* Slightly wider for condensed font readability */
+  text-transform: uppercase;
+  /* The reference image uses uppercase */
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light Mode: "Deep Royal" - Rich, authoritative readability */
+:root:not(.dark) h1,
+:root:not(.dark) h2,
+:root:not(.dark) h3 {
+  background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Dark Mode: "Luminous Titanium" - Premium glowing metallic look */
+.dark h1,
+.dark h2,
+.dark h3 {
+  background: linear-gradient(135deg, #ffffff 10%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: 0 0 30px rgba(56, 189, 248, 0.15);
+}
+
+/* Responsive Scaling - ADJUSTED FOR BEBAS NEUE (It's a smaller/taller font) */
+h1 {
+  font-size: clamp(3.5rem, 8vw + 1rem, 6rem);
+  /* Increased size for impact */
+  line-height: 0.95;
+  font-weight: 400;
+  /* Bebas only has 400 weight */
+}
+
+h2 {
+  font-size: clamp(2.5rem, 6vw + 1rem, 4.5rem);
+  line-height: 1;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+/* Gradient Text Highlight Helper */
+.text-gradient-accent {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Override for specific cases where gradient/fill is needed */
+.no-outline {
+  -webkit-text-stroke: 0;
+  -webkit-text-fill-color: var(--foreground);
+  color: var(--foreground);
+  text-shadow: none;
+}
+
+
+/* =========================================
+   🌌 DARK SKY ANIMATION THEME
+   ========================================= */
+
+/* STAR FIELDS (Parallax Layers) */
+/* Tiny Background Stars */
+/* STAR FIELDS (Parallax Layers) */
+/* Tiny Background Stars - Increased Count & Size */
+#stars {
+  width: 1.5px;
+  height: 1.5px;
+  background: transparent;
+  box-shadow: 1744px 122px #FFF, 134px 1321px #FFF, 92px 859px #FFF, 1200px 500px #FFF, 500px 300px #FFF, 900px 100px #FFF, 1500px 900px #FFF, 200px 1400px #FFF, 400px 400px #FFF, 800px 800px #FFF, 1600px 200px #FFF, 1800px 1100px #FFF, 300px 1800px #FFF, 1400px 1400px #FFF, 600px 600px #FFF, 1000px 1000px #FFF, 1900px 50px #FFF, 100px 1900px #FFF, 750px 250px #FFF, 1300px 750px #FFF, 450px 1550px #FFF, 1150px 350px #FFF, 1750px 1250px #FFF, 50px 550px #FFF, 1650px 1650px #FFF, 850px 950px #FFF, 1450px 450px #FFF, 250px 1150px #FFF, 1250px 1750px #FFF, 550px 50px #FFF, 1550px 850px #FFF, 950px 1450px #FFF, 350px 250px #FFF;
+  animation: animStar 150s linear infinite;
+}
+
+#stars:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 1.5px;
+  height: 1.5px;
+  background: transparent;
+  box-shadow: 1744px 122px #FFF, 134px 1321px #FFF, 92px 859px #FFF, 1200px 500px #FFF, 500px 300px #FFF, 900px 100px #FFF, 1500px 900px #FFF, 200px 1400px #FFF, 400px 400px #FFF, 800px 800px #FFF, 1600px 200px #FFF, 1800px 1100px #FFF, 300px 1800px #FFF, 1400px 1400px #FFF, 600px 600px #FFF, 1000px 1000px #FFF, 1900px 50px #FFF, 100px 1900px #FFF, 750px 250px #FFF, 1300px 750px #FFF, 450px 1550px #FFF, 1150px 350px #FFF, 1750px 1250px #FFF, 550px 550px #FFF, 1650px 1650px #FFF, 850px 950px #FFF, 1450px 450px #FFF, 250px 1150px #FFF, 1250px 1750px #FFF, 550px 50px #FFF, 1550px 850px #FFF, 950px 1450px #FFF, 350px 250px #FFF;
+}
+
+/* Medium Stars - Increased Count & Size */
+#stars2 {
+  width: 2.5px;
+  height: 2.5px;
+  background: transparent;
+  box-shadow: 800px 400px #FFF, 1100px 1300px #FFF, 400px 900px #FFF, 100px 200px #ffffff80, 1600px 600px #ffffff80, 1500px 100px #FFF, 200px 1600px #FFF, 600px 1200px #FFF, 1200px 200px #FFF, 300px 800px #FFF, 1800px 500px #FFF, 900px 1500px #FFF, 1400px 900px #FFF, 500px 1800px #FFF, 1000px 300px #FFF, 1700px 1300px #FFF, 400px 700px #FFF, 1300px 1700px #FFF, 700px 400px #FFF, 1600px 1000px #FFF;
+  animation: animStar 100s linear infinite;
+}
+
+#stars2:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 2.5px;
+  height: 2.5px;
+  background: transparent;
+  box-shadow: 800px 400px #FFF, 1100px 1300px #FFF, 400px 900px #FFF, 100px 200px #ffffff80, 1600px 600px #ffffff80, 1500px 100px #FFF, 200px 1600px #FFF, 600px 1200px #FFF, 1200px 200px #FFF, 300px 800px #FFF, 1800px 500px #FFF, 900px 1500px #FFF, 1400px 900px #FFF, 500px 1800px #FFF, 1000px 300px #FFF, 1700px 1300px #FFF, 400px 700px #FFF, 1300px 1700px #FFF, 700px 400px #FFF, 1600px 1000px #FFF;
+}
+
+/* Large Foreground Stars - NEW LAYER */
+#stars3 {
+  width: 3.5px;
+  height: 3.5px;
+  background: transparent;
+  box-shadow: 1200px 800px #FFF, 500px 200px #FFF, 1600px 1400px #FFF, 300px 1100px #FFF, 900px 500px #FFF, 1400px 1700px #FFF, 100px 600px #FFF, 1800px 300px #FFF, 700px 1500px #FFF, 1100px 100px #FFF;
+  animation: animStar 60s linear infinite;
+}
+
+#stars3:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 3.5px;
+  height: 3.5px;
+  background: transparent;
+  box-shadow: 1200px 800px #FFF, 500px 200px #FFF, 1600px 1400px #FFF, 300px 1100px #FFF, 900px 500px #FFF, 1400px 1700px #FFF, 100px 600px #FFF, 1800px 300px #FFF, 700px 1500px #FFF, 1100px 100px #FFF;
+}
+
+/* Shooting Stars */
+.shooting-star {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
+  animation: shooting 3s linear infinite;
+  opacity: 0;
+}
+
+.shooting-star::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, #fff, transparent);
+}
+
+.shooting-star-0 {
+  top: 0;
+  left: 20%;
+  animation-delay: 0s;
+  animation-duration: 4s;
+}
+
+.shooting-star-1 {
+  top: 0;
+  left: 70%;
+  animation-delay: 2s;
+  animation-duration: 6s;
+}
+
+.shooting-star-2 {
+  top: 40%;
+  left: 0%;
+  animation-delay: 5s;
+  animation-duration: 5s;
+}
+
+/* Animations */
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+@keyframes shooting {
+  0% {
+    transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(315deg) translateX(-1500px);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-slow {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s infinite ease-in-out;
+}
+
+/* Cinematic Background Drift */
+/* Cinematic Background Drift & Nebula */
+@keyframes drift-slow {
+  0% {
+    transform: translate(0, 0) scale(1.05);
+  }
+
+  50% {
+    transform: translate(-3%, -2%) scale(1.1);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1.05);
+  }
+}
+
+.animate-drift-slow {
+  animation: drift-slow 40s ease-in-out infinite;
+}
+
+@keyframes nebula-move {
+  0% {
+    transform: scale(1) rotate(0deg) translate(0, 0);
+    opacity: 0.3;
+  }
+
+  33% {
+    transform: scale(1.1) rotate(120deg) translate(5%, -5%);
+    opacity: 0.5;
+  }
+
+  66% {
+    transform: scale(0.9) rotate(240deg) translate(-5%, 5%);
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: scale(1) rotate(360deg) translate(0, 0);
+    opacity: 0.3;
+  }
+}
+
+.animate-nebula {
+  animation: nebula-move 20s infinite linear;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes breathe {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-breathe {
+  animation: breathe 8s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+
+  100% {
+    background-position: -200% center;
+  }
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 4s linear infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Spaceship & Warp Speed */
+@keyframes fly-ship {
+  0% {
+    transform: translate(-10vw, 110vh) rotate(45deg) scale(0.6);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(110vw, -10vh) rotate(45deg) scale(0.6);
+    opacity: 0;
+  }
+}
+
+.animate-fly-ship {
+  animation: fly-ship 15s linear infinite;
+}
+
+.speed-6x #stars3 {
+  animation-duration: 10s !important;
+}
+
+/* --- NEW: CRASH & EXPLOSION ANIMATIONS --- */
+
+/* 1. Crash Animation: Fly fast -> Impact -> Shake/Spin -> Vanish */
+@keyframes crash-sequence {
+  0% {
+    transform: translate(-10vw, 50vh) rotate(15deg) scale(0.8);
+    opacity: 1;
+  }
+
+  45% {
+    transform: translate(45vw, 45vh) rotate(15deg) scale(0.8);
+    opacity: 1;
+  }
+
+  /* Impact Point */
+  48% {
+    transform: translate(45vw, 45vh) rotate(120deg) scale(0.9);
+    opacity: 1;
+  }
+
+  /* Spin Out */
+  50% {
+    transform: translate(45vw, 45vh) scale(0);
+    opacity: 0;
+  }
+
+  /* Vaporize */
+  100% {
+    transform: translate(45vw, 45vh) scale(0);
+    opacity: 0;
+  }
+}
+
+.animate-crash-ship {
+  animation: crash-sequence 12s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+}
+
+/* 2. Explosion Shockwave */
+@keyframes explosion-burst {
+  0% {
+    transform: translate(45vw, 45vh) scale(0);
+    opacity: 0;
+  }
+
+  48% {
+    transform: translate(45vw, 45vh) scale(0);
+    opacity: 0;
+  }
+
+  /* Wait for ship */
+  49% {
+    transform: translate(45vw, 45vh) scale(0.5);
+    opacity: 1;
+  }
+
+  /* BOOM */
+  55% {
+    transform: translate(45vw, 45vh) scale(3);
+    opacity: 0;
+  }
+
+  /* Dissipate */
+  100% {
+    transform: translate(45vw, 45vh) scale(3);
+    opacity: 0;
+  }
+}
+
+.animate-explosion {
+  animation: explosion-burst 12s linear infinite;
+}
+
+/* 3. 3D Floating Motion (Moon Pieces) */
+@keyframes float-3d {
+  0% {
+    transform: rotate3d(1, 1, 1, 0deg) translate(0, 0);
+  }
+
+  50% {
+    transform: rotate3d(1, 1, 1, 15deg) translate(20px, -20px);
+  }
+
+  100% {
+    transform: rotate3d(1, 1, 1, 0deg) translate(0, 0);
+  }
+}
+
+.animate-float-3d {
+  animation: float-3d 20s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
