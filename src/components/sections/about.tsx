@@ -62,7 +62,7 @@ export function About() {
                 ShahiSolution serves as the central <strong>Project Management Entity</strong>, 
                 driving innovation and strategy for a diverse ecosystem of tech ventures. 
                 Under the visionary leadership of Shahi Rahman, we bridge the gap between 
-                education (DevOppsHub Academy) and industry (Code Sair, Drocode, Drowmedia), 
+                education (DEVEPOS HUB Academy) and industry (Code Sair, Drocode, Drowmedia), 
                 delivering cutting-edge software solutions and empowering the next generation of tech talent.
               </p>
             </motion.div>
@@ -102,7 +102,7 @@ export function About() {
                 img: "/images/drocode-logo.png" 
               },
               { 
-                name: "DevOppsHub Academy", 
+                name: "DEVEPOS HUB Academy", 
                 role: "Own Founder: Shahi Rahman", 
                 img: "/images/devopshub-academy-logo.png",
                 highlight: "shadow-purple-900/20"

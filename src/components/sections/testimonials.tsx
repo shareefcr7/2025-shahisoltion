@@ -6,7 +6,7 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    text: "The internship at ShahiSolution wasn't just about coding; it was a full immersion into the software engineering lifecycle. Working on live client projects refined my problem-solving skills and gave me the confidence to deliver production-grade applications. It truly bridged the gap between academic theory and industry reality.",
+    text: "The internship at DEVEPOS HUB wasn't just about coding; it was a full immersion into the software engineering lifecycle. Working on live client projects refined my problem-solving skills and gave me the confidence to deliver production-grade applications. It truly bridged the gap between academic theory and industry reality.",
     name: "Shareef",
     role: "Software Engineer",
     image: "/images/student-1.jpg"

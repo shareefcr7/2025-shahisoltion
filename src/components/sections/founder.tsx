@@ -49,7 +49,7 @@ export function Founder() {
                   SHAHI RAHMAN
                 </h2>
                 <h3 className="text-xl sm:text-2xl text-blue-400 font-semibold tracking-wide leading-relaxed">
-                  Founder of ShahiSolution Project Management &amp; <br className="hidden lg:block"/> DevOppsHub Academy
+                  Founder of ShahiSolution Project Management &amp; <br className="hidden lg:block"/> DEVEPOS HUB Academy
                 </h3>
                 <div className="flex flex-wrap gap-2 justify-center lg:justify-start mt-2">
                     {["Software Engineering Educator", "MERN Stack Expert", "Mentored 100+ Students 👨‍🏫"].map((role, i) => (

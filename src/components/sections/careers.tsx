@@ -25,7 +25,7 @@ export function Careers() {
                     <Briefcase className="h-4 w-4" /> Career Opportunities
                 </div>
                 <h2 className="font-['var(--font-bebas)'] text-4xl sm:text-5xl font-bold uppercase tracking-wider mb-6 bg-[linear-gradient(110deg,#ffffff,45%,#94a3b8,55%,#ffffff)] bg-[length:200%_100%] animate-shimmer bg-clip-text text-transparent">
-                    Build Your Career with ShahiSolution
+                    Build Your Career with DEVEPOS HUB
                 </h2>
                 <p className="text-muted-foreground text-lg mb-8">
                     We don't just train you; we prepare you for the industry. From internships to live projects, we provide the pathway to your first developer role.

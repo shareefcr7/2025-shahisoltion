@@ -26,7 +26,7 @@ export function Highlights() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-500/10 text-pink-500 text-sm font-medium mb-4 animate-pulse">
              <Instagram className="h-4 w-4" /> Live from Instagram
           </div>
-          <h2 className="text-3xl font-bold sm:text-4xl mb-4 bg-[linear-gradient(110deg,#ffffff,45%,#94a3b8,55%,#ffffff)] bg-[length:200%_100%] animate-shimmer bg-clip-text text-transparent">Life at ShahiSolution</h2>
+          <h2 className="text-3xl font-bold sm:text-4xl mb-4 bg-[linear-gradient(110deg,#ffffff,45%,#94a3b8,55%,#ffffff)] bg-[length:200%_100%] animate-shimmer bg-clip-text text-transparent">Life at DEVEPOS HUB</h2>
           <p className="text-muted-foreground">Check out our latest training sessions, success stories, and tech tips.</p>
         </div>
 

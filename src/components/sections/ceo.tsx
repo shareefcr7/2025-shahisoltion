@@ -38,7 +38,7 @@ export function CPU() { // CEO Section
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10" />
                 <Image
                   src="/images/devopshub-ceo.jpg"
-                  alt="Adarsha K - CEO of ShahiSolution"
+                  alt="Adarsha K - CEO of DEVEPOS HUB"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   priority
@@ -46,7 +46,7 @@ export function CPU() { // CEO Section
                  {/* Name Tag Overlay */}
                  <div className="absolute bottom-6 left-6 z-20">
                     <h3 className="text-3xl font-bold text-white tracking-wide drop-shadow-md">Adarsha K</h3>
-                    <p className="text-blue-300 font-medium tracking-wider uppercase text-sm">CEO of DEVOPPSWEB</p>
+                    <p className="text-blue-300 font-medium tracking-wider uppercase text-sm">CEO of DEVEPOS HUB</p>
                 </div>
               </div>
             </motion.div>
@@ -64,10 +64,10 @@ export function CPU() { // CEO Section
                    VISION-DRIVEN <br/> LEADER & <br/> <span className="text-blue-500 text-transparent bg-clip-text bg-[linear-gradient(110deg,#3b82f6,45%,#93c5fd,55%,#3b82f6)] animate-shimmer bg-[length:200%_100%]">FULL-STACK</span> ARCHITECT
                 </h2>
                 <p className="text-slate-300 text-lg leading-relaxed max-w-2xl">
-                  As the <strong>CEO of DEVOOPSWEB</strong>, Adarsha K combines expertise in <strong>Software Engineering, Full-Stack Development, and MERN Stack</strong> to drive technical innovation.
+                  As the <strong>CEO of DEVEPOS HUB</strong>, Adarsha K combines expertise in <strong>Software Engineering, Full-Stack Development, and MERN Stack</strong> to drive technical innovation.
                 </p>
                 <p className="text-slate-300 text-lg leading-relaxed max-w-2xl">
-                  Lead Architect behind ShahiSolution's innovative software products and learning programs. 
+                  Lead Architect behind DEVEPOS HUB Academy's innovative software products and learning programs. 
                   Building modern tech solutions and empowering students to master software engineering in the tech world.
                 </p>
               </div>
